@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
+    <script src="/public/js/app.js" defer></script>
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
-<div class="container">
-
     <body>
         <header>
             <nav>
