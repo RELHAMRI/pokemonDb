@@ -1,8 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+html::-webkit-scrollbar {
+    background-color: greenyellow;
+    border-radius: 30px;
+    width: 5%;
 }
 
 header {
@@ -29,6 +38,15 @@ ul, li, a {
 .container {
     background: url('/public/img/bg_pokemon.png') center/cover;
     height: 100vh;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
+.bg_add {
+    background: url('/public/img/voici-comment-maximiser-vos-gains-durant-la-semaine-de-lenvironnement-pokemon-go-2024-ne-manquez-pas-ces-astuces-scaled.jpg') center/cover;
+    height: 100vh;
+    padding-top: 200px;
 }
 
 .formulaire {
@@ -37,7 +55,7 @@ ul, li, a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 20px auto;
+    margin: auto;
 }
 
 .formulaire h1 {
@@ -95,15 +113,160 @@ button:hover {
     background-color: #45a049;
 }
 
-.text-danger {
-    color: red;
-    font-size: 14px;
-    margin-top: -10px;
+.voirPlus {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.voirPlus:hover {
+    background-color: #ffffff;
+}
+
+.voirMoins {
+    background-color: #ffffff;
+    color: black;
+}
+
+.voirMoins:hover {
+    background-color: #fdfdfd;
+}
+
+/* Styles de base des cartes Pokémon */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Transition sur toutes les propriétés */
+    overflow: hidden; /* Masque tout contenu débordant */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Zoom léger lors du hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Augmentation de l'ombre lors du hover */
+}
+
+.description {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Hauteur initiale à 0 pour cacher la description */
+    opacity: 0; /* Description invisible au départ */
+    overflow: hidden; /* Cache tout débordement */
+}
+
+.card.expanded .description {
+    max-height: 500px; /* Hauteur max de la description (ajuste selon tes besoins) */
+    opacity: 1; /* Rend la description visible */
+}
+
+.card p:first-of-type {
+    margin-top: 5px;
+}
+
+.card p {
     margin-bottom: 10px;
 }
 
-.home {
-    text-align: center;
-    padding-top: 30px;
+button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Styles pour masquer les éléments */
+.hidden {
+    display: none;
+}
+
+
+button {
+    margin-top: 10px;
+}
+
+
+
+.Feu {
+    background-color: #F08030;
     color: white;
+}
+
+.Eau {
+    background-color: #6890F0;
+    color: white;
+}
+
+.Plante {
+    background-color: #78C850;
+    color: white;
+}
+
+.Électrique {
+    background-color: #F8D030;
+    color: rgb(255, 255, 255);
+}
+
+.Roche {
+    background-color: #B8A038;
+    color: white;
+}
+
+.Poison {
+    background-color: #A040A0;
+    color: white;
+}
+
+.Psy {
+    background-color: #F85888;
+    color: white;
+}
+
+.Combat {
+    background-color: #C03028;
+    color: white;
+}
+
+.Normal {
+    background-color: #A8A878;
+    color: black;
+}
+
+.Insecte {
+    background-color: #A8B820;
+    color: white;
+}
+
+.Spectre {
+    background-color: #705898;
+    color: white;
+}
+
+.Glace {
+    background-color: #98D8D8;
+    color: black;
+}
+
+.Dragon {
+    background-color: #7038F8;
+    color: white;
+}
+
+footer {
+    background-color: rgb(181, 222, 135);
+    font-size: 20px;
+    text-align:center;
+    height: 100px;
+    padding-top: 40px;
 }
